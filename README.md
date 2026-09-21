@@ -1,4 +1,4 @@
-# Multimodal Astro Classification
+# Multimodal-DL_for_Astro-Classification
 
 A PyTorch spatial-spectral fusion model for classifying SDSS objects as stars, galaxies, or quasars. The pipeline downloads paired SDSS image cutouts and spectra, encodes both modalities, and fuses them with cross-attention.
 
