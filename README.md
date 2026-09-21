@@ -1,6 +1,29 @@
-# Multimodal-DL_for_Astro-Classification
+# Multimodal Deep Learning for Astronomical Classification
 
 A PyTorch spatial-spectral fusion model for classifying SDSS objects as stars, galaxies, or quasars. The pipeline downloads paired SDSS image cutouts and spectra, encodes both modalities, and fuses them with cross-attention.
+
+## Project Overview
+This repository contains an end-to-end deep learning pipeline designed to classify celestial objects (Stars, Galaxies, and Quasars) using raw, real-world survey data from the Sloan Digital Sky Survey (SDSS).
+
+Standard classification models often struggle with degenerate morphologies (e.g., distant compact galaxies appearing identical to stars in 2D images). To solve this, I engineered a **Dual-Stream Spatial-Spectral Fusion Network**. This model ingests unstructured multimodal data—fusing visual morphology with chemical fingerprints—to achieve highly accurate categorical insights.
+
+## Analytical Methodology & Architecture
+Instead of relying on pre-packaged, clean datasets, this project demonstrates rigorous data engineering and custom architectural design:
+* **Automated Data Ingestion:** Engineered an SQL-based extraction pipeline via the SDSS API to mine and download paired sets of uncalibrated `.FITS` image cutouts and 1D spectroscopic light curves.
+* **Spatial Feature Extraction:** Built a 2D Convolutional Neural Network (CNN) to process $g$, $r$, and $z$ optical filters, extracting morphological structures.
+* **Spectral Feature Extraction:** Utilized 1D Dilated Convolutions to process flux arrays, identifying fundamental chemical absorption and emission lines.
+* **Cross-Attention Fusion:** Implemented a multi-head cross-attention mechanism, allowing the spatial structures to mathematically "query" the chemical signatures to resolve classification ambiguities before passing the aggregated tokens to a final Softmax projection head.
+
+## Skills Demonstrated
+This pipeline was built to showcase the analytical rigor required to extract actionable insights from complex, noisy data environments. Key competencies include:
+* **Advanced Data Wrangling:** Parsing, normalizing, and handling extreme class imbalances within raw astronomical datasets.
+* **Applied Machine Learning:** Translating theoretical calculus and linear algebra into a functional PyTorch architecture.
+* **Exploratory Data Analysis (EDA):** Visualizing high-dimensional sensor data to validate physical assumptions prior to model training.
+
+## Tech Stack
+* **Framework:** PyTorch (Custom `nn.Module` and `Dataset` classes)
+* **Data Engineering:** `astroquery`, `astropy`, SQL (SDSS CasJobs)
+* **Analysis & Visualization:** Python, `pandas`, `numpy`, `matplotlib`, `networkx`
 
 ## Setup
 
