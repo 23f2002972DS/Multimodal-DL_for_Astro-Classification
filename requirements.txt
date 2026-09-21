@@ -1,0 +1,8 @@
+astroquery>=0.4.10
+astropy>=6.0
+matplotlib>=3.8
+networkx>=3.2
+numpy>=1.26
+# Install the CUDA-compatible PyTorch build separately when needed:
+# https://pytorch.org/get-started/locally/
+torch>=2.2
