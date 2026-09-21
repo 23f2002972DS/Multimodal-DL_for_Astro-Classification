@@ -1,6 +1,7 @@
 # Multimodal Deep Learning for Astronomical Classification
 
 A PyTorch spatial-spectral fusion model for classifying SDSS objects as stars, galaxies, or quasars. The pipeline downloads paired SDSS image cutouts and spectra, encodes both modalities, and fuses them with cross-attention.
+View on colab: https://colab.research.google.com/drive/1ilqZ8dkgpcGsfyOq46GSHHQgr7z5gMrJ#scrollTo=8ou4JfmOOAVZ
 
 ## Project Overview
 This repository contains an end-to-end deep learning pipeline designed to classify celestial objects (Stars, Galaxies, and Quasars) using raw, real-world survey data from the Sloan Digital Sky Survey (SDSS).
